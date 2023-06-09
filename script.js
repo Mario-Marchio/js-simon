@@ -36,7 +36,7 @@ for(let i = 0; i < randomNumbers.length; i++){
 }
 
 
-let seconds = 30 ;
+let seconds = 3 ;
 countdown.innerText = seconds;
 
 const down30Sec = setInterval(() => {
@@ -46,14 +46,16 @@ const down30Sec = setInterval(() => {
         clearInterval(down30Sec);
         countdown.classList.add(`d-none`);
         randomNumber.classList.add(`d-none`);
-        let answers = [];
-        for(let i =0; i < 5; i++ ){
-            let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
-            if(randomNumbers.includes(answer.value)){
-                answers.push(answer);
-            }
-            console.log(answers);
-        };
+        setTimeout(()=>{
+            let answers = [];
+            for(let i =0; i < 5; i++ ){
+                let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
+                if(randomNumbers.includes(answer)){
+                    answers.push(answer);
+                }
+                console.log(answers);
+            };
+        },200)
     }
     
 }, 1000);
