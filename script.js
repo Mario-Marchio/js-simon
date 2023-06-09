@@ -46,16 +46,15 @@ const down30Sec = setInterval(() => {
         clearInterval(down30Sec);
         countdown.classList.add(`d-none`);
         randomNumber.classList.add(`d-none`);
+        let answers = [];
+        for(let i =0; i < 5; i++ ){
+            let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
+            if(randomNumbers.includes(answer.value)){
+                answers.push(answer);
+            }
+            console.log(answers);
+        };
     }
     
 }, 1000);
 
-
-let answers = [];
-for(let i =0; i < 5; i++ ){
-    let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
-    if(randomNumbers.includes(answer.value)){
-        answers.push(answer);
-    }
-    console.log(answers);
-};
