@@ -34,3 +34,18 @@ let numberListEnd = `</ul>`
 
 randomNumber.innerHTML = numberListStart + numberListEnd
 }
+
+
+let seconds = 30 ;
+countdown.innerText = seconds;
+
+const down30Sec = setInterval(() => {
+
+    countdown.innerText = --seconds;
+    if(seconds === -1 ){
+        clearInterval(down30Sec);
+        countdown.classList.add(`d-none`);
+        randomNumber.classList.add(`d-none`);
+    }
+
+}, 1000);
