@@ -1,5 +1,6 @@
 const countdown = document.getElementById(`countdown`);
 const randomNumber = document.getElementById(`random-number`);
+let answers = [];
 
 // genera un array di numeri random diversi tra loro
 function generateRandomNumber (){
@@ -47,7 +48,6 @@ const down30Sec = setInterval(() => {
         countdown.classList.add(`d-none`);
         randomNumber.classList.add(`d-none`);
         setTimeout(()=>{
-            let answers = [];
             for(let i =0; i < 5; i++ ){
                 let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
                 if(randomNumbers.includes(answer)){
@@ -55,8 +55,8 @@ const down30Sec = setInterval(() => {
                 }
                 console.log(answers);
             };
+            alert(`Hai ricordato ${answers.length} numeri:`+ ` ` + answers);
         },200)
     }
     
 }, 1000);
-
