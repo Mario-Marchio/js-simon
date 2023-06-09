@@ -54,7 +54,7 @@ const down30Sec = setInterval(() => {
 let answers = [];
 for(let i =0; i < 5; i++ ){
     let answer = parseInt(prompt(`inserisci il primo numero, i numeri vanno da 1 a 100 `));
-    if(randomNumbers.includes(answer)){
+    if(randomNumbers.includes(answer.value)){
         answers.push(answer);
     }
     console.log(answers);
